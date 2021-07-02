@@ -1,0 +1,65 @@
+
+
+.pokemonCard {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    border: solid #3564ad 5px;
+    -webkit-box-shadow: 0px 0px 1px 3px #FFCB06; 
+    box-shadow: 0px 0px 1px 3px #FFCB06;
+    color: #3564ad;
+    font-size: 15px;
+    font-weight: 900;
+    padding: 5px;
+    cursor: pointer;
+    height: 138px;
+    width:auto;
+    flex-basis: 1;
+    flex-grow: 2;
+    img {
+        height: 100px;
+    }
+    .column2 {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        .favorite {
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .favorite:hover {
+            font-size: 25px;
+        }
+    }
+    .column {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        .pTitle {
+            margin-top: 0.25rem;
+            margin-bottom: 0.25rem;
+        }
+        .pData {
+            margin-top: 0.125rem;
+            margin-bottom: 0.125rem;
+            margin-left: 1rem;
+        }
+    }
+}
+
+.pokemonCard:hover {
+    background-color: #fffcf0;
+    -webkit-box-shadow: 2px 2px 5px 2px #000000; 
+    box-shadow: 2px 2px 2px 2px #000000;
+}
+
+
+    
+

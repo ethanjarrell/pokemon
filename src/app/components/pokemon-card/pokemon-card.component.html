@@ -1,0 +1,38 @@
+
+<div *ngFor="let result of results">
+    <div id="{{result.id}}" (mouseover)="getDetails(result.id)" class="pokemonCard">
+        <div class="column2">
+            <img src="{{result.image}}"/>
+            <i class="fas fa-heart"></i>
+            <div (click)="addFavorite(result.id)" class="favorite" *ngIf="clicked && result.id == id">❤️</div>
+        </div>
+        <div *ngIf="clicked && result.id == id" class="column"> 
+            <p class="pTitle" *ngIf="clicked && result.id == id">Name: {{pokeDetail.name}}</p>
+            <p class="pTitle" *ngIf="clicked && result.id == id">Height: {{pokeDetail.height}}</p>
+            <p class="pTitle" *ngIf="clicked && result.id == id">Weight: {{pokeDetail.weight}}</p>
+        </div>
+        
+        <div *ngIf="clicked && result.id == id" class="column">
+            <p class="pTitle" *ngIf="clicked && result.id == id">Abilities:</p>
+            <p class="pData" *ngFor="let ability of pokeDetail.abilities">
+                {{ability.ability.name}},
+            </p>
+        </div>
+        
+        <div *ngIf="clicked && result.id == id" class="column">
+            <p class="pTitle" *ngIf="clicked && result.id == id">Forms: </p>
+            <p class="pData" *ngFor="let form of pokeDetail.forms">
+                {{form.name}},
+            </p>
+        </div>
+        
+        <div *ngIf="clicked && result.id == id" class="column">
+            <p class="pTitle" *ngIf="clicked && result.id == id">Types: </p>
+                <p class="pData" *ngFor="let type of pokeDetail.types">
+                    {{type.type.name}},
+                </p>
+            
+        </div>
+        
+    </div>
+</div>
